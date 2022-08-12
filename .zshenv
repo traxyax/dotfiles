@@ -1,0 +1,1 @@
+/home/trax/.config/zsh/.zshenv
