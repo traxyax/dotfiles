@@ -4,9 +4,9 @@ git_dir=$HOME/git
 themes_dir=$HOME/.local/share/themes
 
 if [ "$(lsb_release -s -i)" = "Fedora" ]; then
-  sudo dnf install qt5ct-kvantum
-elif [ "$(lsb_release -s -i)" = "" ]; then
-  echo 1
+  sudo dnf install qt5ct kvantum
+elif [ "$(lsb_release -s -i)" = "openSUSE" ]; then
+  sudo zypper install qt5ct kvantum-manager
 fi
 
 : '

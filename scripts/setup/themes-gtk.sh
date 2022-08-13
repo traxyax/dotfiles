@@ -33,7 +33,7 @@ else
 fi
 
 ln -sf $git_dir/macOS $themes_dir
-ln -sf $git_dir/macOS-dark $themes_dir
+ln -sf $git_dir/macOS-Dark $themes_dir
 
 echo -e "\n ***** Themes installation done *****\n"
 

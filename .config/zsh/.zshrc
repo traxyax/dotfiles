@@ -20,12 +20,8 @@ zstyle ':completion:*' rehash true
 autoload -Uz compinit
 compinit
 
-if [ "$(lsb_release -s -i)" = "Fedora" ]; then
-  [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [ "$(lsb_release -s -i)" = "" ]; then
-  echo 1
-fi
+[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f $HOME/git/powerlevel10k/powerlevel10k.zsh-theme ] && source $HOME/git/powerlevel10k/powerlevel10k.zsh-theme
 

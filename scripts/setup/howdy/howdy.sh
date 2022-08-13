@@ -2,7 +2,7 @@
 
 pam_conf=/etc/pam.d
 howdy_conf=/usr/lib64/security/howdy
-$permission="iauth       sufficient   pam_python.so $howdy_conf/pam.py"
+permission="iauth       sufficient   pam_python.so $howdy_conf/pam.py"
 
 echo -e "\n ***** HOWDY INSTALLATION ******\n"
 
@@ -38,8 +38,12 @@ if [ "$(lsb_release -s -i)" = "Fedora" ]; then
   # Fix polkit
   sudo cp pam.py $howdy_conf
 
-elif [ "$(lsb_release -s -i)" = "" ]; then
-  echo 1
+elif [ "$(lsb_release -s -i)" = "openSUSE" ]; then
+#  sudo zypper addrepo --refresh http://download.opensuse.org/repositories/home:/dmafanasyev/openSUSE_Tumbleweed/ dmafanasyev
+#  sudo zypper addrepo https://download.opensuse.org/repositories/openSUSE:Factory/standard/openSUSE:Factory.repo
+  sudo zypper refresh
+  sudo zypper install python-python-pam
+  sudo zypper install howdy
 fi
 
 echo -e "\n ***** HOWDY INSTALLATION DONE ******\n"

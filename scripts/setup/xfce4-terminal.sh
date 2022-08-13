@@ -5,8 +5,8 @@ colorschemes_dir=$HOME/.local/share/xfce4/terminal/colorschemes
 
 if [ "$(lsb_release -s -i)" = "Fedora" ]; then
   sudo dnf install xfce4-terminal
-elif [ "$(lsb_release -s -i)" = "" ]; then
-  echo 1
+elif [ "$(lsb_release -s -i)" = "openSUSE" ]; then
+  sudo zypper install xfce4-terminal
 fi
 
 cd $git_dir

@@ -4,4 +4,4 @@ alias vi='nvim'
 alias ba='bat'
 
 alias cprf='cp -rf'
-alias rmrf='rm -rf
+alias rmrf='rm -rf'

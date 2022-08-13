@@ -9,8 +9,8 @@ FILE=translate
 
 if [ "$(lsb_release -s -i)" = "Fedora" ]; then
   sudo dnf install qutebrowser
-elif [ "$(lsb_release -s -i)" = "" ]; then
-  echo 1
+elif [ "$(lsb_release -s -i)" = "openSUSE" ]; then
+  sudo zypper install qutebrowser
 fi
   
 
