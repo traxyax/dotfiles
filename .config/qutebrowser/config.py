@@ -2431,4 +2431,5 @@ config.load_autoconfig(True)
 # config.bind('y', 'prompt-accept yes', mode='yesno')
 
 
-config.source('themes/nord-qutebrowser.py')
+#config.source('themes/nord-qutebrowser.py')
+config.source('themes/onedark.py')

@@ -36,7 +36,7 @@ if [ "$(lsb_release -s -i)" = "Fedora" ]; then
   sudo semodule -i howdy.pp
 
   # Fix polkit
-  sudo cp pam.py $howdy_conf
+  #sudo cp pam.py $howdy_conf
 
 elif [ "$(lsb_release -s -i)" = "openSUSE" ]; then
 #  sudo zypper addrepo --refresh http://download.opensuse.org/repositories/home:/dmafanasyev/openSUSE_Tumbleweed/ dmafanasyev

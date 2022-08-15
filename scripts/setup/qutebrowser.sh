@@ -21,14 +21,22 @@ else
   cd $git_dir/nord-qutebrowser && git pull
 fi
 
+cd $git_dir
+if [ ! -d $git_dir/qutebrowser-themes ]; then
+  git clone https://github.com/leosolid/qutebrowser-themes
+else
+  cd $git_dir/qutebrowser-themes && git pull
+fi
+
 mkdir -p $themes_dir
 ln -sf $git_dir/nord-qutebrowser/nord-qutebrowser.py $themes_dir
+ln -sf $git_dir/qutebrowser-themes/themes/onedark.py $themes_dir
 
 cd $git_dir
 if [ ! -d $git_dir/Qute-Translate ]; then
   git clone https://github.com/AckslD/Qute-Translate
 else
-  cd $git_dir/Qute-Translate && git pulls
+  cd $git_dir/Qute-Translate && git pull
 fi
 
 mkdir -p $INSTALL_PATH

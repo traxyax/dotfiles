@@ -4,11 +4,19 @@ ALTERNATE_EDITOR=vim
 
 export EDITOR VISUAL_EDITOR ALTERNATE_EDITOR
 
-PAGER=bat
-MANPAGER=less
+if [ $(which bat | wc -l) = 1 ]; then
+  PAGER=bat
+  MANPAGER=less
+  export PAGER MANPAGER
+fi
 
-export PAGER MANPAGER
+: '
+if [ $(which batman | wc -l) = 1 ]; then
+  export MANPAGER=batman
+fi
+'
 
-export QT_QPA_PLATFORMTHEME=qt5ct
+export OPENCV_LOG_LEVEL=0
+export OPENCV_VIDEOIO_PRIORITY_INTEL_MFX=0
 
-export QUTE_TRANS_TARGET=fr
+[ -f $HOME/.xprofile ] && source $HOME/.xprofile
