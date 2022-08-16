@@ -1,10 +1,12 @@
-EDITOR=nvim
-VISUAL_EDITOR=$EDITOR
-ALTERNATE_EDITOR=vim
+if [ $(which nvim | grep 'not found' | wc -l) = 0 ]; then
+  EDITOR=nvim
+  VISUAL_EDITOR=$EDITOR
+  ALTERNATE_EDITOR=vim
 
-export EDITOR VISUAL_EDITOR ALTERNATE_EDITOR
+  export EDITOR VISUAL_EDITOR ALTERNATE_EDITOR
+fi
 
-if [ $(which bat | wc -l) = 1 ]; then
+if [ $(which bat | grep 'not found' | wc -l) = 0 ]; then
   PAGER=bat
   MANPAGER=less
   export PAGER MANPAGER

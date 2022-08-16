@@ -23,6 +23,9 @@ compinit
 [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 [ -f $HOME/git/powerlevel10k/powerlevel10k.zsh-theme ] && source $HOME/git/powerlevel10k/powerlevel10k.zsh-theme
 
 [ -f $ZDOTDIR/xterm-title.zsh ] && source $ZDOTDIR/xterm-title.zsh

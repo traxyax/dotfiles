@@ -1,14 +1,18 @@
-if [ $(which lsd | wc -l) = 1 ]; then
+if [ $(which lsd | grep 'not found' | wc -l) = 0 ]; then
   alias ls='lsd'
 fi
 
-if [ $(which nvim | wc -l) = 1 ]; then
+if [ $(which nvim | grep 'not found' | wc -l) = 0 ]; then
   alias vim='nvim'
   alias v='nvim'
 fi
 
-if [ $(which bat | wc -l) = 1 ]; then
+if [ $(which bat | grep 'not found' | wc -l) = 0 ]; then
   alias b='bat'
+fi
+
+if [ $(which batman | grep 'not found' | wc -l) = 0 ]; then
+  alias man='batman'
 fi
 
 alias cprf='cp -rf'
